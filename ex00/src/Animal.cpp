@@ -2,7 +2,7 @@
 // default constructor
 Animal::Animal(): _type("Unknown")
 {
-	std::cout << "Animal Default contructor called" << std::endl;
+	std::cout << "\t" << "Animal Default contructor called" << std::endl;
 }
 // Type constructor
 Animal::Animal(const std::string& type)
@@ -11,13 +11,13 @@ Animal::Animal(const std::string& type)
 		_type = "Unknown";
 	else
 		_type = type;
-	std::cout << "Animal constructor called" << std::endl;
+	std::cout << "\t" << "Animal constructor called" << std::endl;
 }
 // Copy constructor
 Animal::Animal(const Animal& other)
 {
 	_type = other._type;
-	std::cout << "Copy constructor called" << std::endl;
+	std::cout << "\t" << "Copy constructor called" << std::endl;
 
 }
 // Copy assignment operator overload
@@ -28,17 +28,30 @@ Animal&	Animal::operator=(const Animal& other)
 		_type = other._type;
 	}
 	return (*this);
-	std::cout << "Copy assignment operator called" << std::endl;
+	std::cout << "\t" << "Copy assignment operator called" << std::endl;
 }
 
 // Destructor
 Animal::~Animal()
 {
-	std::cout << "Animal Destructor called." << std::endl;
+	std::cout << "\t" << "Animal Destructor called." << std::endl;
 }
 
-
-void	Animal::makeSound()
+std::string	Animal::getType() const
 {
-	std::cout << "Animal sound./n" ;
+	return (_type);
+}
+
+void	Animal::setType(const std::string& type)
+{
+	if (!type.empty())
+		_type = "Unkown";
+	else
+		_type = type;
+}
+
+void	Animal::makeSound() const
+{
+	std::cout << "\t" << "Make sound called: " << std::endl << "\t";
+	std::cout << "\t" << "Animal sound.\n" ;
 }

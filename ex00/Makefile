@@ -10,7 +10,7 @@ OBJDIR = obj
 INCLUDE = include
 #################	SOURCES			##################################
 
-SRC = $(SRCDIR)/main.cpp $(SRCDIR)/
+SRC = $(SRCDIR)/main.cpp $(SRCDIR)/Animal.cpp $(SRCDIR)/Cat.cpp $(SRCDIR)/Dog.cpp $(SRCDIR)/WrongAnimal.cpp $(SRCDIR)/WrongCat.cpp
 
 #################	OBJECTS			##################################
 
@@ -45,6 +45,9 @@ fclean:	clean
 	rm -rf $(TARGET)
 
 re: clean all
+
+valg: re
+	valgrind --leak-check=full --show-leak-kinds=all ./Animal
 
 .PHONY: all clean fclean re del
 
