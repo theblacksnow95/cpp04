@@ -23,12 +23,15 @@ int	main()
 		const WrongAnimal*	meta = new WrongAnimal();
 		const WrongAnimal*	i = new WrongCat();
 		const Animal*	j = new Cat();
+		const Animal*	c;
+		c = j;
 		std::cout << "\t" << i->getType() << " " << std::endl;
 		std::cout << "\t" << j->getType() << " " << std::endl;
 		i->makeSound();
 		j->makeSound();
+		c->makeSound();
 		delete i;
-		delete j;
+		delete c;
 		delete meta;
 		return (0);
 	}

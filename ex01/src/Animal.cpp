@@ -25,7 +25,6 @@ Animal&	Animal::operator=(const Animal& other)
 {
 	if (this != &other)
 	{
-		
 		_type = other._type;
 	}
 	return (*this);
@@ -45,7 +44,7 @@ std::string	Animal::getType() const
 
 void	Animal::setType(const std::string& type)
 {
-	if (!type.empty())
+	if (type.empty())
 		_type = "Unkown";
 	else
 		_type = type;

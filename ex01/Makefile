@@ -1,6 +1,6 @@
 #################	TARGET & FLAGS	##################################
 
-TARGET = Animal
+TARGET = Brain
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -g
 C98 = -std=c++98
@@ -10,7 +10,8 @@ OBJDIR = obj
 INCLUDE = include
 #################	SOURCES			##################################
 
-SRC = $(SRCDIR)/main.cpp $(SRCDIR)/Animal.cpp $(SRCDIR)/Cat.cpp $(SRCDIR)/Dog.cpp $(SRCDIR)/WrongAnimal.cpp $(SRCDIR)/WrongCat.cpp
+SRC = $(SRCDIR)/main.cpp $(SRCDIR)/Animal.cpp $(SRCDIR)/Cat.cpp $(SRCDIR)/Dog.cpp \
+	  $(SRCDIR)/WrongAnimal.cpp $(SRCDIR)/WrongCat.cpp $(SRCDIR)/Brain.cpp
 
 #################	OBJECTS			##################################
 
