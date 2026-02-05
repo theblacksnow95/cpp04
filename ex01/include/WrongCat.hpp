@@ -7,6 +7,7 @@
 class WrongCat: public WrongAnimal
 {
 	private:
+		std::string	_name;
 		Brain		*_brain;
 	public:
 		WrongCat();

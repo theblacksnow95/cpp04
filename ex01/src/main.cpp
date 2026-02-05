@@ -40,14 +40,14 @@ int main()
 		std::cout << '\t' << "Deep copy check: " << std::endl;
 		Cat a;
 		Cat b;
-		std::cout << '\t' << "cat a type: " << a.getType() << std::endl;
-		std::cout << '\t' << "cat b type: " << b.getType() << std::endl;
+		std::cout << '\t' << "cat a name: " << a.getName() << std::endl;
+		std::cout << '\t' << "cat b name: " << b.getName() << std::endl;
 		b = a;
 		std::cout << '\t' << "<< b has been set equal to a. >>" << std::endl;
-		a.setType("Another cat");
+		a.setName("Another cat");
 		std::cout << '\t' << "<< cat a type has been changed. >>" << std::endl;
-		std::cout << '\t' << "cat a type: " << a.getType() << std::endl;
-		std::cout << '\t' << "cat b type: " << b.getType() << std::endl;
+		std::cout << '\t' << "cat a Name: " << a.getName() << std::endl;
+		std::cout << '\t' << "cat b Name: " << b.getName() << std::endl;
 	}
 	return (0);
 }

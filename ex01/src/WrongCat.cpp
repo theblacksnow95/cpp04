@@ -1,7 +1,7 @@
 #include "WrongCat.hpp"
 
 // default constructor
-WrongCat::WrongCat(): WrongAnimal("WrongCat")
+WrongCat::WrongCat(): WrongAnimal("WrongCat"), _name("Whiskas")
 {
 	 _brain = new Brain();
 	std::cout << "\t" <<  "WrongCat default constructor" << std::endl;
@@ -10,6 +10,7 @@ WrongCat::WrongCat(): WrongAnimal("WrongCat")
 // copy constructor
 WrongCat::WrongCat(const WrongCat& other): WrongAnimal(other._type)
 {
+	_name = other._name;
 	_brain = other._brain;
 	std::cout << "\t" <<"WrongCat Copy constructor" << std::endl;
 }
@@ -22,6 +23,7 @@ WrongCat&	WrongCat::operator=(const WrongCat& other)
 		delete _brain;
 		_type = other._type;
 		_brain = other._brain;
+		_name = other._name;
 	}
 	std::cout << "\t" <<"Copy assignement operator called" << std::endl;
 	return (*this);

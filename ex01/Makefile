@@ -48,7 +48,7 @@ fclean:	clean
 re: clean all
 
 valg: re
-	valgrind --leak-check=full --show-leak-kinds=all ./$(TARGET)
+	valgrind --leak-check=full --show-leak-kinds=all -s ./$(TARGET)
 
 .PHONY: all clean fclean re del
 
