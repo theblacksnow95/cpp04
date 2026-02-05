@@ -22,7 +22,10 @@ WrongCat&	WrongCat::operator=(const WrongCat& other)
 	{
 		delete _brain;
 		_type = other._type;
-		_brain = other._brain;
+		if (other._brain != NULL)
+			_brain = other._brain;
+		else
+			_brain = NULL;
 		_name = other._name;
 	}
 	std::cout << "\t" <<"Copy assignement operator called" << std::endl;
@@ -32,7 +35,7 @@ WrongCat&	WrongCat::operator=(const WrongCat& other)
 // destructor
 WrongCat::~WrongCat()
 {
-	 delete _brain;
+	delete _brain;
 	std::cout << "\t" <<"WrongCat Destructor called" << std::endl;
 }
 

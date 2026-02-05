@@ -36,16 +36,15 @@ int main()
 			delete arr[i];
 	}
 	{
-		std::cout  << std::endl << YLL << "Second test round" << RST << std::endl;
+		std::cout  << std::endl << YLL << "Third test round" << RST << std::endl;
 		std::cout << '\t' << "Deep copy check: " << std::endl;
 		Cat a;
-		Cat b;
+		Cat b = a;
 		std::cout << '\t' << "cat a name: " << a.getName() << std::endl;
 		std::cout << '\t' << "cat b name: " << b.getName() << std::endl;
-		b = a;
 		std::cout << '\t' << "<< b has been set equal to a. >>" << std::endl;
 		a.setName("Another cat");
-		std::cout << '\t' << "<< cat a type has been changed. >>" << std::endl;
+		std::cout << '\t' << "<< cat a name has been changed. >>" << std::endl;
 		std::cout << '\t' << "cat a Name: " << a.getName() << std::endl;
 		std::cout << '\t' << "cat b Name: " << b.getName() << std::endl;
 	}
